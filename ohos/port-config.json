@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kotlin": "2.4.20-0.1.0-08",
+  "compose": "1.12.0-0.1.0-11",
+  "gradle": "9.5.0",
+  "metadataPolicy": "STANDARD_LOCKED_KGP_METADATA_NO_FALLBACK",
+  "modules": {
+    "datetime-wheel-picker": {
+      "group": "io.github.qsxs.cpf.wheel",
+      "upstreamVersion": "1.4.0",
+      "sourceCount": 61,
+      "gitSourceCount": 60,
+      "generatedSourceCount": 1,
+      "license": "Apache-2.0",
+      "repository": "https://github.com/darkokoa/compose-datetime-wheel-picker"
+    }
+  }
+}

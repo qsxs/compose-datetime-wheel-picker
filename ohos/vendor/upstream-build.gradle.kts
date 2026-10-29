@@ -1,0 +1,141 @@
+//import com.google.devtools.ksp.gradle.KspTaskMetadata
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
+plugins {
+  alias(libs.plugins.multiplatform)
+  alias(libs.plugins.compose)
+  alias(libs.plugins.compose.compiler)
+  alias(libs.plugins.android.kotlin.multiplatform.library)
+  alias(libs.plugins.maven.publish)
+  alias(libs.plugins.ksp)
+}
+
+kotlin {
+  applyDefaultHierarchyTemplate()
+
+  android {
+    namespace = "dev.darkokoa.datetimewheelpicker"
+    compileSdk = 36
+    minSdk = 21
+
+    compilerOptions {
+      jvmTarget.set(JvmTarget.JVM_17)
+    }
+
+    withHostTest {}
+  }
+
+  jvm {
+    compilations.all {
+      compileTaskProvider.configure {
+        compilerOptions {
+          jvmTarget.set(JvmTarget.JVM_17)
+        }
+      }
+    }
+  }
+
+  js {
+    browser()
+    binaries.executable()
+  }
+
+  @OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
+  wasmJs {
+    browser()
+  }
+
+  listOf(
+    iosArm64(),
+    iosSimulatorArm64()
+  ).forEach {
+    it.binaries.framework {
+      baseName = "ComposeApp"
+      isStatic = true
+    }
+  }
+
+  sourceSets {
+    all {
+      languageSettings {
+        optIn("kotlin.time.ExperimentalTime")
+      }
+    }
+    commonMain.dependencies {
+      implementation(compose.runtime)
+      implementation(compose.material3)
+      implementation(libs.kotlinx.datetime)
+
+      implementation(libs.lyricist)
+    }
+
+    commonTest.dependencies {
+      implementation(kotlin("test"))
+    }
+
+    androidMain.dependencies {
+    }
+
+    jvmMain.dependencies {
+    }
+
+    jsMain.dependencies {
+    }
+
+    wasmJsMain.dependencies {
+    }
+
+    iosMain.dependencies {
+    }
+
+  }
+}
+
+dependencies {
+  add("kspCommonMainMetadata", libs.lyricist.processor)
+}
+
+//kotlin.sourceSets.commonMain {
+//  tasks.withType<KspTaskMetadata> { kotlin.srcDir(destinationDirectory) }
+//}
+
+// Add task dependencies after plugin configuration is complete
+afterEvaluate {
+  // Make all compilation tasks depend on KSP
+  tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask<*>>().configureEach {
+    if (name != "kspCommonMainKotlinMetadata") {
+      dependsOn("kspCommonMainKotlinMetadata")
+    }
+  }
+
+  // Make all tasks depend on KSP if their names contain specific patterns
+  tasks.configureEach {
+    if (name.contains("SourcesJar") || name == "sourcesJar") {
+      dependsOn("kspCommonMainKotlinMetadata")
+      logger.info("Added KSP dependency to task: $name")
+    }
+  }
+}
+
+kotlin.sourceSets.commonMain {
+  kotlin.srcDir("build/generated/ksp/metadata/commonMain/kotlin")
+}
+
+ksp {
+  arg("lyricist.internalVisibility", "true")
+  arg("lyricist.packageName", "dev.darkokoa.datetimewheelpicker")
+}
+
+mavenPublishing {
+  publishToMavenCentral(automaticRelease = true)
+  signAllPublications()
+}
+
+// https://youtrack.jetbrains.com/issue/CMP-4906
+tasks.withType<org.jetbrains.kotlin.gradle.targets.js.testing.KotlinJsTest> {
+  enabled = false
+}
+
+tasks.withType<Test> {
+  failOnNoDiscoveredTests.set(false)
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://qsxs.github.io/cpf-maven/",
+  "group": "io.github.qsxs.cpf.lyricist",
+  "version": "1.8.0-cpf11-preview-fad3d9091c75-40827525373-1",
+  "sourceCommit": "fad3d9091c75927320da3511350202e681269b2a",
+  "fingerprint": "3fca02e7dea92db2eb7e7066f7d35898fbc44490ca7003fdfca3c2bf82b8ca9d",
+  "modules": {
+    "lyricist": {
+      "metadataArtifact": {
+        "url": "https://qsxs.github.io/cpf-maven/io/github/qsxs/cpf/lyricist/lyricist/1.8.0-cpf11-preview-fad3d9091c75-40827525373-1/lyricist-1.8.0-cpf11-preview-fad3d9091c75-40827525373-1.jar",
+        "size": 6486,
+        "sha256": "26925da689ef45c5c59cb118fb11ea75d6ef235c12fe998f72cfb4385690e0c1"
+      },
+      "metadataPayload": {
+        "default/manifest": {
+          "size": 305,
+          "sha256": "80a36bbd8fc58a20763376448410daa9074884c37596184b36f9d717513f13e2"
+        },
+        "default/linkdata/module": {
+          "size": 73,
+          "sha256": "6e892f46365976c6850e0da2fad4137f37d15a5fff931e87551c71ec64f284c9"
+        },
+        "default/linkdata/package_cafe.adriel.lyricist/0_lyricist.knm": {
+          "size": 584,
+          "sha256": "4a3333f7984ee2c81389d9e4f0a95957dcdc19afd89252418c57dda13c6196a9"
+        }
+      },
+      "nativeArtifacts": {
+        "ohos_x64": {
+          "url": "https://qsxs.github.io/cpf-maven/io/github/qsxs/cpf/lyricist/lyricist-ohosx64/1.8.0-cpf11-preview-fad3d9091c75-40827525373-1/lyricist-ohosx64-1.8.0-cpf11-preview-fad3d9091c75-40827525373-1.klib",
+          "size": 10393,
+          "sha256": "c9a4ec6cec181ade813c2170f8750bfd75e740a3e6abf1ed6f199dbbbdc0164e"
+        },
+        "ohos_arm64": {
+          "url": "https://qsxs.github.io/cpf-maven/io/github/qsxs/cpf/lyricist/lyricist-ohosarm64/1.8.0-cpf11-preview-fad3d9091c75-40827525373-1/lyricist-ohosarm64-1.8.0-cpf11-preview-fad3d9091c75-40827525373-1.klib",
+          "size": 10406,
+          "sha256": "0365ffbfc39c77d62a4bd0bd97b5dc1b4755568445d34f712461a2acf581a7d5"
+        }
+      },
+      "provenanceSha256": "0386c5767f60a93df79fa503939a7236ffd3dd3f582a326544d3ae845d97bac4"
+    },
+    "lyricist-core": {
+      "metadataArtifact": {
+        "url": "https://qsxs.github.io/cpf-maven/io/github/qsxs/cpf/lyricist/lyricist-core/1.8.0-cpf11-preview-fad3d9091c75-40827525373-1/lyricist-core-1.8.0-cpf11-preview-fad3d9091c75-40827525373-1.jar",
+        "size": 6983,
+        "sha256": "ad271fde372f62f345820e43c8ef268976370942a2aa1f55c4e07380e1a96890"
+      },
+      "metadataPayload": {
+        "default/manifest": {
+          "size": 315,
+          "sha256": "bbc627d429e93e1eca0b679a23547f04f8dfe2b24f27899081e366aef9982f25"
+        },
+        "default/linkdata/module": {
+          "size": 78,
+          "sha256": "3f9ac680fd67908b79da5ba96c36ce2f20e9081b69f6e7547bb459da53cd6a2b"
+        },
+        "default/linkdata/package_cafe.adriel.lyricist/0_lyricist.knm": {
+          "size": 1465,
+          "sha256": "e0e30dd78c00527703ae1add62e9fd8bd7c45f03eb315209cff0bfaf0d69ced4"
+        }
+      },
+      "nativeArtifacts": {
+        "ohos_x64": {
+          "url": "https://qsxs.github.io/cpf-maven/io/github/qsxs/cpf/lyricist/lyricist-core-ohosx64/1.8.0-cpf11-preview-fad3d9091c75-40827525373-1/lyricist-core-ohosx64-1.8.0-cpf11-preview-fad3d9091c75-40827525373-1.klib",
+          "size": 10979,
+          "sha256": "580dc14c78575b1e6dfd2e219b7040eacc0bddd3a8035ff0e89f9eff192f28d9"
+        },
+        "ohos_arm64": {
+          "url": "https://qsxs.github.io/cpf-maven/io/github/qsxs/cpf/lyricist/lyricist-core-ohosarm64/1.8.0-cpf11-preview-fad3d9091c75-40827525373-1/lyricist-core-ohosarm64-1.8.0-cpf11-preview-fad3d9091c75-40827525373-1.klib",
+          "size": 10992,
+          "sha256": "784f3f05ed958bbf5aa5b22e1f25e8a8becae1e54ce39e6f8aaa278266f8f63f"
+        }
+      },
+      "provenanceSha256": "0386c5767f60a93df79fa503939a7236ffd3dd3f582a326544d3ae845d97bac4"
+    }
+  }
+}

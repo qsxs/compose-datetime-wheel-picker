@@ -1,0 +1,218 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../datetime-wheel-picker/1.4.0/datetime-wheel-picker-1.4.0.module",
+    "group": "io.github.darkokoa",
+    "module": "datetime-wheel-picker",
+    "version": "1.4.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.6.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.4.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.compose.runtime",
+          "module": "runtime",
+          "version": {
+            "requires": "1.11.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.compose.material3",
+          "module": "material3",
+          "version": {
+            "requires": "1.9.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-datetime",
+          "version": {
+            "requires": "0.8.0"
+          }
+        },
+        {
+          "group": "cafe.adriel.lyricist",
+          "module": "lyricist",
+          "version": {
+            "requires": "1.8.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "datetime-wheel-picker-iosArm64Main.klib",
+          "url": "datetime-wheel-picker-iosarm64-1.4.0.klib",
+          "size": 277712,
+          "sha512": "2b89f6f94aaab3423bfefd978199b4c6e3e9bf4ed3699a71acaf4bb7d7a986633116388e22eb433b9da359d4baa3bd3ddc8ef301550f552170562a0214faf5d5",
+          "sha256": "8f3bdd78eccf1a6c2c1c23afe66d205ec026893ed356329e547af36d92c6a6df",
+          "sha1": "bbabb54672456551ee3c9d69a94916b5b4940132",
+          "md5": "907e152c0dd68c3577a7070cb29735b2"
+        }
+      ]
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "files": [
+        {
+          "name": "datetime-wheel-picker-iosarm64-sources.jar",
+          "url": "datetime-wheel-picker-iosarm64-1.4.0-sources.jar",
+          "size": 50168,
+          "sha512": "411dfc48382bab7bc1ae36e964bd0fa5c4a2ac6b03940390040f71d1852f1835e4217a1d66bb22c6c907925df4b70f8b47283c1ee136158287e9e2a34f10e64e",
+          "sha256": "cd8c95516665c5ecbd0d5f7e13e1703a8a18ebd65f219d8d3ec803eaa82ed307",
+          "sha1": "3c1fd3ddba6c3bb420147d067fef29b6041e134c",
+          "md5": "94c1c9e2c3177e6efedcad30d6c52e7d"
+        }
+      ]
+    },
+    {
+      "name": "iosArm64ResourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.libraryelements": "kotlin-multiplatformresources",
+        "org.gradle.usage": "kotlin-multiplatformresources",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.4.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.compose.runtime",
+          "module": "runtime",
+          "version": {
+            "requires": "1.11.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.compose.material3",
+          "module": "material3",
+          "version": {
+            "requires": "1.9.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-datetime",
+          "version": {
+            "requires": "0.8.0"
+          }
+        },
+        {
+          "group": "cafe.adriel.lyricist",
+          "module": "lyricist",
+          "version": {
+            "requires": "1.8.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "datetime-wheel-picker.kotlin_resources.zip",
+          "url": "datetime-wheel-picker-iosarm64-1.4.0-kotlin_resources.kotlin_resources.zip",
+          "size": 374,
+          "sha512": "ff6e17c9ce19cbb8ee4de803688909d264c1496f9af831367e407a71af7db8a295c4f4ceff62ef37499b9897a5764eb91dc9c992fd2adc4ae39b401e588c253d",
+          "sha256": "f6982553f39ff5fecadb19df532e4d301ae7f1f305c66d8414526109c36776f1",
+          "sha1": "97f86449924dc2b6840630c3a33ba8b2aaf4e574",
+          "md5": "07f4061e90a3600e9017c190f10efed2"
+        }
+      ]
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.4.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.compose.runtime",
+          "module": "runtime",
+          "version": {
+            "requires": "1.11.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.compose.material3",
+          "module": "material3",
+          "version": {
+            "requires": "1.9.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-datetime",
+          "version": {
+            "requires": "0.8.0"
+          }
+        },
+        {
+          "group": "cafe.adriel.lyricist",
+          "module": "lyricist",
+          "version": {
+            "requires": "1.8.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "datetime-wheel-picker-iosarm64-metadata.jar",
+          "url": "datetime-wheel-picker-iosarm64-1.4.0-metadata.jar",
+          "size": 261,
+          "sha512": "1487e5a20c9e4d74f298e07c42e96a61be11b7a768c3fbc199ee138cd68e1fc2267d1cfe3f11f288acc05df755315344d052cc5f6f751f126ab4fe1caa5125ea",
+          "sha256": "c6deada2fac53b8ea6523dbda77597b128006674616f140f04df23264c6d1aa3",
+          "sha1": "2ad14aed781c4a73ed4dbb421966d408a0a06686",
+          "md5": "f43436d6bec321290f6af228ad602604"
+        }
+      ]
+    }
+  ]
+}
