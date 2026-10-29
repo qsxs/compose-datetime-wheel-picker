@@ -1,6 +1,7 @@
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 import java.security.MessageDigest
+import java.util.zip.ZipFile
 import org.gradle.api.artifacts.Configuration
 import org.gradle.api.artifacts.component.ModuleComponentIdentifier
 import org.gradle.api.artifacts.result.ResolvedDependencyResult
@@ -166,7 +167,7 @@ fun resolution() = listOf("commonMainResolvableDependenciesMetadata", "ohosX64Co
     val graph = edges(configuration)
     check(graph.any { it.getValue("requested") == "$lyricistGroup:lyricist:$lyricistVersion" })
     check(graph.any { edge ->
-        val from = edge.getValue("from").toString()
+        val from = edge.getValue("from")
         from in listOf("$lyricistGroup:lyricist:$lyricistVersion", "$lyricistGroup:lyricist-ohosx64:$lyricistVersion", "$lyricistGroup:lyricist-ohosarm64:$lyricistVersion") &&
             edge.getValue("requested") == "$lyricistGroup:lyricist-core:$lyricistVersion"
     }) { "Lyricist api edge to same-version core missing" }
@@ -179,7 +180,7 @@ fun payload(file: File): Map<String, Map<String, Any>> {
         if (normalized.startsWith("default/")) result[normalized] = mapOf("size" to bytes.size.toLong(), "sha256" to MessageDigest.getInstance("SHA-256").digest(bytes).joinToString("") { "%02x".format(it) })
     }
     if (file.isDirectory) leaves(file).forEach { add(it.relativeTo(file).invariantSeparatorsPath, it.readBytes()) }
-    else if (file.isFile && file.extension in listOf("jar", "klib", "bin")) java.util.zip.ZipFile(file).use { zip ->
+    else if (file.isFile && file.extension in listOf("jar", "klib", "bin")) ZipFile(file).use { zip ->
         zip.entries().asSequence().filter { !it.isDirectory }.forEach { add(it.name, zip.getInputStream(it).use { stream -> stream.readBytes() }) }
     }
     return result
