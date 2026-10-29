@@ -48,4 +48,4 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "datetime-wheel-picker-ohos"
+rootProject.name = "datetime-wheel-picker"
